@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitter Sentiment Analysis</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        form { max-width: 400px; }
+        label, input { display: block; margin-bottom: 0.5em; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Twitter Sentiment Analysis</h1>
+    {% if error %}
+        <p class="error">Error: {{ error }}</p>
+    {% endif %}
+    <form method="post">
+        <label for="username">Twitter Username:</label>
+        <input type="text" name="username" id="username" required>
+        <label for="tweet_count">Number of Tweets (max 100):</label>
+        <input type="number" name="tweet_count" id="tweet_count" min="1" max="100" value="10">
+        <input type="submit" value="Analyze">
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Flask is used as the web framework for routing and rendering HTML templates.
+Flask==2.2.3
+
+# Tweepy is used to access Twitter's API (v1.1 endpoints) to fetch tweets.
+tweepy==4.14.0
+
+# TextBlob is used for performing sentiment analysis.
+# It uses a pre-trained sentiment analyzer based on Pattern (or NLTK resources)
+# to compute the polarity and subjectivity of text.
+textblob==0.17.1
+
+# NLTK is required by TextBlob for tokenization and accessing necessary corpora.
+nltk==3.8.1

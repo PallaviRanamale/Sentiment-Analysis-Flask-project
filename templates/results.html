@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        .tweet { margin-bottom: 1.5em; padding: 0.5em; border-bottom: 1px solid #ccc; }
+        .sentiment { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Sentiment Analysis for @{{ username }}</h1>
+    {% for res in results %}
+        <div class="tweet">
+            <p><strong>Original:</strong> {{ res.original_text }}</p>
+            <p><strong>Cleaned:</strong> {{ res.cleaned_text }}</p>
+            <p class="sentiment">
+                Sentiment: {{ res.sentiment }} (Polarity: {{ res.polarity }}, Subjectivity: {{ res.subjectivity }})
+            </p>
+            <p><em>Created at:</em> {{ res.created_at }}</p>
+        </div>
+    {% endfor %}
+    <a href="/">Back</a>
+</body>
+</html>
